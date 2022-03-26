@@ -1,0 +1,19 @@
+<div class="card-poke-detail" *ngIf="pokemon">
+    <mat-card>
+    <mat-card-header>
+      <mat-card-title> <h1>{{pokemon.name | titlecase }}</h1></mat-card-title>
+    </mat-card-header>
+        <div class="container-img">
+            <img mat-card-image  src="{{pokemon.sprites['front_default']}}" alt="" >
+            <img mat-card-image src="{{pokemon.sprites['back_default']}}" alt="">
+        </div>     
+    <mat-card-content>
+        <mat-card-content>
+          <span class="badge">Weight : {{pokemon.weight}}</span>
+          <span class="badge">Height : {{pokemon.height}}</span>
+        </mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

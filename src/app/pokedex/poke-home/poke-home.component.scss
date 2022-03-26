@@ -1,0 +1,27 @@
+.poke-home{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: center;
+}
+app-poke-list{
+    margin-right: 200px;
+}
+app-poke-detail{
+    width: 350px;
+    
+}
+
+.header-logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+
+    margin-bottom: 40px;
+
+    img{
+        height: 100%;
+    }
+}
+

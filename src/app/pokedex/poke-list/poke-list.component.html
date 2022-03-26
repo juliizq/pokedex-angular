@@ -1,0 +1,18 @@
+<mat-progress-spinner *ngIf="isLoading; else pokeList" [color]="'accent'" [mode]="'indeterminate'"> </mat-progress-spinner>
+
+<ng-template #pokeList>
+    <div class="card-poke-list">
+        <mat-card *ngFor="let pokemon of pokemons" (click)="onClickDetail(pokemon)">
+            <mat-card-title-group>        
+            <mat-card-title> <h2>{{pokemon['name'] | titlecase }}</h2></mat-card-title>
+            <img mat-card-md-image src="{{pokemon.sprites['front_default']}}">
+            </mat-card-title-group>
+            
+        </mat-card>
+    </div>
+    
+    <div class="button">
+        <button mat-raised-button [disabled]="page <= 0" (click)="previousPokemons()">Previous</button>
+        <button mat-raised-button [disabled]="page >= getLimitNext()" (click)="nextPokemons()">Next</button>
+    </div>
+</ng-template>
